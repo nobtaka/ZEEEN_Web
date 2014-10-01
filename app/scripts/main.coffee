@@ -1,0 +1,6 @@
+$ ->
+  ShowHeader()
+
+ShowHeader = ->
+  $(window).scroll = ->
+    
