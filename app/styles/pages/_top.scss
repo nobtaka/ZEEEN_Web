@@ -33,7 +33,7 @@ svg {
   transform: translate(-50%, -50%);
 
   > g {
-    animation: fade-in ease-out 2s;
+//    animation: fade-in ease-out 2s;
   }
 
   // > g {
@@ -42,39 +42,6 @@ svg {
   //   animation: dash 2s linear alternate;
   // }
 }
-
-@keyframes make-box-shadow {
-  0% {
-    box-shadow: none;
-  }
-
-  50% {
-    box-shadow: rgba(#000, .05) 0 1px 1px 0;    
-  }
-
-  100% {
-    box-shadow: rgba(#000, .1) 0 2px 4px 0, rgba(#000, .3) 0 8px 12px 0;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-// @keyframes dash {
-//   from {
-//     stroke-dashoffset: 2000;
-//   }
-//   to {
-//     stroke-dashoffset: 0;
-//   }
-// }
 
 h1 {
   padding: 364px 0 0;
