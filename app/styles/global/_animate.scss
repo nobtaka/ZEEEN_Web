@@ -3,12 +3,12 @@
     box-shadow: none;
   }
 
-  // 50% {
-  //   box-shadow: rgba(#000, .05) 0 1px 1px 0;    
-  // }
-
   100% {
-    box-shadow: rgba(#000, .1) 0 2px 4px 0, rgba(#000, .3) 0 8px 12px 0;
+    box-shadow: rgba(#000, .1) 0 1px 2px 0, rgba(#000, .3) 0 4px 6px 0;
+
+    @include breakpoint(reverso-papa-bear) {
+      box-shadow: rgba(#000, .1) 0 2px 4px 0, rgba(#000, .3) 0 8px 12px 0;
+    }
   }
 }
 

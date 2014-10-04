@@ -14,13 +14,13 @@
   }
 
   @if $point == reverso-baby-bear {
-    @media (min-width: 641px) { @content; }
+    @media (min-width: 321px) { @content; }
   }
   @if $point == reverso-mama-bear {
-    @media (min-width: 768px) { @content; }
+    @media (min-width: 376px) { @content; }
   }
   @if $point == reverso-papa-bear {
-    @media (min-width: 801px) { @content; }
+    @media (min-width: 415px) { @content; }
   }
   @if $point == reverso-super-bear {
     @media (min-width: 1281px) { @content; }
