@@ -30,17 +30,22 @@ header {
     border-radius: 50px;
     transform: translate(-50%, 0);
     animation: make-box-shadow-mini ease-out, fade-up-mini ease-out;
-    animation-duration: 3s, 1.2s;
-    animation-delay: .2s, 1.1s;
+    animation-duration: .4s;
+    animation-delay: .6s;
     animation-fill-mode: forwards;
+
+    @include breakpoint(reverso-baby-sub-bear) {
+      width: 160px;
+      height: 160px;
+    }
 
     @include breakpoint(reverso-papa-bear) {
       width: 364px;
       height: 364px;
       border-radius: 80px;
       animation: make-box-shadow ease-out, fade-up ease-out;
-      animation-duration: 3s, 1.2s;
-      animation-delay: .2s, 1.1s;
+      animation-duration: .6s;
+      animation-delay: .6s;
       animation-fill-mode: forwards;
     }
   }
@@ -49,9 +54,17 @@ header {
     margin: 20px 0 0;
     padding: 0 0 $footer-height;
 
+    @include breakpoint(reverso-baby-sub-bear) {
+      margin: 12px 0 0;
+    }
+
     a {
       font-size: 24px;
       color: #ababab;
+
+      @include breakpoint(reverso-baby-sub-bear) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -63,24 +76,33 @@ svg {
   transform: translate(-50%, -50%);
   transition: all ease-out .1s;
 
+  @include breakpoint(reverso-baby-sub-bear) {
+    width: 110px;
+    height: 110px;
+  }
+
   @include breakpoint(reverso-papa-bear) {
     width: 256px;
     height: 256px;
-    font-size: 256px;
   }
 
-  > g {
-    animation: dash 2s linear alternate;
-    animation-fill-mode: forwards;
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 0;
-  }
+  // > g {
+  //   animation: dash 2s linear alternate;
+  //   animation-fill-mode: forwards;
+  //   stroke-dasharray: 2000;
+  //   stroke-dashoffset: 0;
+  // }
 }
 
 h1 {
   padding: 213px 0 0;
   font-size: 30px;
   transition: all ease-out .1s;
+
+  @include breakpoint(reverso-baby-sub-bear) {
+    padding: 172px 0 0;
+    font-size: 24px;
+  }
 
   @include breakpoint(reverso-papa-bear) {
     padding: 390px 0 0;
@@ -92,6 +114,11 @@ h2 {
   margin: 15px 0 0;
   font-size: 15px;
   transition: all ease-out .1s;
+
+  @include breakpoint(reverso-baby-sub-bear) {
+    margin: 8px 0 0;
+    font-size: 12px;
+  }
 
   @include breakpoint(reverso-papa-bear) {
     font-size: 30px;

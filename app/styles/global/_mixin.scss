@@ -20,10 +20,10 @@
     @media (min-width: 376px) { @content; }
   }
   @if $point == reverso-papa-bear {
-    @media (min-width: 415px) { @content; }
+    @media (min-width: 415px) and (min-height: 415px) { @content; }
   }
-  @if $point == reverso-super-bear {
-    @media (min-width: 1281px) { @content; }
+  @if $point == reverso-baby-sub-bear {
+    @media (max-height: 415px) { @content; }
   }
 
   @if $point == exclusive-baby-bear {

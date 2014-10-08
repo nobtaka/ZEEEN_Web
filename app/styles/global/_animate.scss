@@ -28,7 +28,7 @@
   }
 
   100% {
-    top: -5px;
+    top: -4px;
   }
 }
 
@@ -38,26 +38,26 @@
   }
 
   100% {
-    top: -10px;
+    top: -8px;
   }
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
+// @keyframes fade-in {
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 2000;
-  }
+// @keyframes dash {
+//   0% {
+//     stroke-dashoffset: 2000;
+//   }
 
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
+//   100% {
+//     stroke-dashoffset: 0;
+//   }
+// }
