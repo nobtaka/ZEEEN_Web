@@ -21,10 +21,11 @@ body {
 header {
   position: relative;
 
-  div {
+  a {
     position: absolute;
     top: 0;
     left: 50%;
+    display: block;
     width: 200px;
     height: 200px;
     border-radius: 50px;
