@@ -35,13 +35,18 @@ header {
     border-radius: 50px;
     transform: translate(-50%, 0);
     animation: make-box-shadow-mini ease-out, fade-up-mini ease-out;
-    animation-duration: .4s;
+    animation-duration: 2s;
     animation-delay: .6s;
     animation-fill-mode: forwards;
 
     @include breakpoint(reverso-baby-sub-bear) {
       width: 160px;
       height: 160px;
+      border-radius: 40px;
+      animation: make-box-shadow-mini ease-out, fade-up-mini-sub ease-out;
+      animation-duration: 2s;
+      animation-delay: .6s;
+      animation-fill-mode: forwards;
     }
 
     @include breakpoint(reverso-papa-bear) {
@@ -49,9 +54,14 @@ header {
       height: 364px;
       border-radius: 80px;
       animation: make-box-shadow ease-out, fade-up ease-out;
-      animation-duration: .4s;
+      animation-duration: 2s;
       animation-delay: .6s;
       animation-fill-mode: forwards;
+
+      &:active {
+        animation: fade-down ease-out;
+        animation-duration: 10s;
+      }
     }
   }
 
@@ -66,15 +76,14 @@ header {
     a {
       font-size: 24px;
       color: #ababab;
+      transition: color ease-out .8s;
 
       @include breakpoint(reverso-baby-sub-bear) {
         font-size: 18px;
       }
 
       &:hover {
-        span {
-          @extend %rotate;
-        }
+        color: #555a5f;
       }
     }
   }
@@ -108,7 +117,7 @@ svg {
 h1 {
   padding: 213px 0 0;
   font-size: 30px;
-  transition: all ease-out .1s;
+  transition: font-size ease-out .1s;
 
   @include breakpoint(reverso-baby-sub-bear) {
     padding: 172px 0 0;
@@ -124,7 +133,7 @@ h1 {
 h2 {
   margin: 15px 0 0;
   font-size: 15px;
-  transition: all ease-out .1s;
+  transition: font-size ease-out .1s;
 
   @include breakpoint(reverso-baby-sub-bear) {
     margin: 8px 0 0;
@@ -147,11 +156,10 @@ footer {
 
   a {
     color: #ababab;
+    transition: color ease-out .8s;
 
     &:hover {
-      span {
-        @extend %rotate;
-      }
+      color: #555a5f;
     }
   }
 }

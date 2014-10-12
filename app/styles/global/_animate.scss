@@ -24,21 +24,42 @@
 
 @keyframes fade-up-mini {
   0% {
-    top: 0;
+    transform: translate3d(-50% , 0, 0);
   }
 
   100% {
-    top: -4px;
+    transform: translate3d(-50%, -4px, 0);
+  }
+}
+
+// iPhoneの縦横を変えた時もう一回やり直す用
+@keyframes fade-up-mini-sub {
+  0% {
+    transform: translate3d(-50% , 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, -4px, 0);
   }
 }
 
 @keyframes fade-up {
   0% {
-    top: 0;
+    transform: translate3d(-50% , 0, 0);
   }
 
   100% {
-    top: -8px;
+    transform: translate3d(-50%, -8px, 0);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    transform: translate3d(-50% , 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
