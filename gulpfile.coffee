@@ -79,6 +79,11 @@ gulp.task 'templates', ->
     .pipe gulp.dest paths.templates.dest
 
 
+gulp.task 'copy', ->
+  gulp.src 'app/fonts/**'
+    .pipe gulp.dest 'dist/fonts/'
+
+
 gulp.task 'scripts', ->
   gulp.src paths.scripts.src
     .pipe $.plumber $.util.log
@@ -144,4 +149,4 @@ gulp.task 'serve:dist', ['build'], ->
 
 
 gulp.task 'build', ->
-  runSequence('clean', ['images', 'files']);
+  runSequence('clean', ['copy', 'images', 'files']);
