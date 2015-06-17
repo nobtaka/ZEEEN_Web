@@ -14,6 +14,7 @@
     "gulp-coffeelint": "^0.4.0",
     "gulp-csso": "^1.0.0",
     "gulp-filter": "^1.0.0",
+    "gulp-ftp": "^1.0.3",
     "gulp-iconfont": "^1.0.0",
     "gulp-iconfont-css": "0.0.9",
     "gulp-if": "^1.2.5",
