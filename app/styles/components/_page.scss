@@ -14,7 +14,7 @@ body {
 
 h1 {
   position: relative;
-  left: 32px;
+  left: 24px;
   width: 100%;
   max-width: 380px;
   margin: 32px auto 0;
@@ -26,23 +26,61 @@ h1 {
 }
 
 main {
-  min-height: calc(100% - 461px - 125px + -70px);
-  padding: 461px + 125px 0 70px;
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100% - 461px - 32px + -40px);
+  padding: 461px + 32px 0 40px;
   @include background(linear-gradient(#fff, #dcdcdf));
+
+  @include breakpoint(reverso-papa-bear) {
+    min-height: calc(100% - 461px - 64px + -70px);
+    padding: 461px + 64px 0 70px;
+  }
+
+  @include breakpoint(reverso-grandpa-bear) {
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 434px;
+      height: 484px;
+      background: url('../images/bg-wave-left.png') no-repeat;
+      background-size: 434px 484px;
+    }
+
+    &:after {
+      right: 0;
+      bottom: 0;
+      width: 431px;
+      height: 388px;
+      background: url('../images/bg-wave-right.png') no-repeat;
+      background-size: 431px 388px;
+    }
+  }
 }
 
 figure {
   position: absolute;
-  top: 125px;
+  top: 32px;
   left: 0;
   right: 0;
   max-width: 203.5px + 11px;
   height: 422.5px + 11px;
   margin: 0 auto;
-  background: url('../images/iphone.png') no-repeat;
+  background: url('../images/bg-iphone.png') no-repeat;
   background-size: 207.5px + 11px 422.5px + 11px;
   background-position: center;
   transform: rotate(-9deg);
+
+  @include breakpoint(reverso-papa-bear) {
+    top: 64px;
+  }
 
   img {
     position: absolute;
@@ -66,16 +104,17 @@ figure {
   display: block;
   width: 100%;
   max-width: 203px;
-  height: 71px;
+  height: 72px;
   margin: 0 auto;
   background: url('../images/app-store-bg.png') no-repeat;
-  background-size: 203px 71px;
+  background-size: 203px 72px;
   text-align: center;
-  line-height: 71px;
+  line-height: 72px;
 
   svg {
     position: relative;
     top: -8px;
+    left: -4px;
     width: 100%;
     max-width: 143px;
   }

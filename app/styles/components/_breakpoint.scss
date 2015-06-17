@@ -23,7 +23,7 @@
     @media (min-width: 767px) { @content; }
   }
   @if $point == reverso-grandpa-bear {
-    @media (min-width: 899px) { @content; }
+    @media (min-width: 1024px) { @content; }
   }
   @if $point == reverso-super-bear {
     @media (min-width: 1281px) { @content; }
