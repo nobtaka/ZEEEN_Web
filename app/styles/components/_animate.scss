@@ -1,0 +1,32 @@
+// http://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+@keyframes image-fade-in-out {
+  0% {
+    opacity: 0;
+    animation-timing-function: linear;
+    transform: translate(16px, 0);
+    z-index: 1;
+  }
+
+  8% {
+    opacity: 1;
+    animation-timing-function: linear;
+    transform: translate(0, 0);
+  }
+
+  17% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  83% {
+    opacity: 0;
+    transform: translate(-16px, 0);
+    z-index: -1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-16px, 0);
+    z-index: -1;
+  }
+}

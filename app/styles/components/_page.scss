@@ -1,0 +1,82 @@
+// -----------------
+// HTML
+// -----------------
+html {
+  height: 100%;
+}
+
+// -----------------
+// BODY
+// -----------------
+body {
+  height: 100%;
+}
+
+h1 {
+  position: relative;
+  left: 32px;
+  width: 100%;
+  max-width: 380px;
+  margin: 32px auto 0;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+main {
+  min-height: calc(100% - 461px - 125px + -70px);
+  padding: 461px + 125px 0 70px;
+  @include background(linear-gradient(#fff, #dcdcdf));
+}
+
+figure {
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  max-width: 203.5px + 11px;
+  height: 422.5px + 11px;
+  margin: 0 auto;
+  background: url('../images/iphone.png') no-repeat;
+  background-size: 207.5px + 11px 422.5px + 11px;
+  background-position: center;
+  transform: rotate(-9deg);
+
+  img {
+    position: absolute;
+    top: 54px;
+    left: 16px;
+    width: 100%;
+    max-width: 183px;
+    opacity: 0;
+
+    &:nth-child(1) {
+      animation: image-fade-in-out $ease-in-out-cubic 20s infinite 0s;
+    }
+
+    &:nth-child(2) {
+      animation: image-fade-in-out $ease-in-out-cubic 20s infinite 10s;
+    }
+  }
+}
+
+.app-store {
+  display: block;
+  width: 100%;
+  max-width: 203px;
+  height: 71px;
+  margin: 0 auto;
+  background: url('../images/app-store-bg.png') no-repeat;
+  background-size: 203px 71px;
+  text-align: center;
+  line-height: 71px;
+
+  svg {
+    position: relative;
+    top: -8px;
+    width: 100%;
+    max-width: 143px;
+  }
+}
