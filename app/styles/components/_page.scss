@@ -1,10 +1,4 @@
 // -----------------
-// HTML
-// -----------------
-html {
-}
-
-// -----------------
 // BODY
 // -----------------
 body {
@@ -22,7 +16,24 @@ body {
     position: relative;
     max-width: 270px + 88px + 351px;
     height: 712px;
-    margin: 40px auto;
+    margin: 40px auto 0;
+    padding: 0 0 40px;
+
+    path {
+      transition: all $ease-in-out-cubic 3s;
+    }
+
+    &.white {
+      path {
+        fill: #fff;
+      }
+    }
+
+    #app-store {
+      path {
+        fill: #555a5f;
+      }
+    }
   }
 }
 
@@ -91,7 +102,7 @@ header {
       box-shadow: 0 1px 2px 0 rgba(#000, .21) inset;
     }
 
-    img {
+    svg {
       vertical-align: middle;
     }
   }
