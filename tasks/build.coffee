@@ -35,7 +35,7 @@ gulp.task 'build', ['default'], ->
   gulp.src 'app/videos/*'
     .pipe gulp.dest 'dist/videos'
 
-  gulp.src 'app/*favicon*'
+  gulp.src 'app/*.png'
     .pipe gulp.dest 'dist'
 
   gulp.src '.tmp/php/*'

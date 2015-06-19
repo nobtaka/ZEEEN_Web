@@ -2,120 +2,161 @@
 // HTML
 // -----------------
 html {
-  height: 100%;
 }
 
 // -----------------
 // BODY
 // -----------------
 body {
-  height: 100%;
+  // position: relative;
 }
 
-h1 {
-  position: relative;
-  left: 24px;
-  width: 100%;
-  max-width: 380px;
-  margin: 32px auto 0;
-  text-align: center;
-
-  img {
-    width: 100%;
-  }
-}
-
-main {
-  position: relative;
-  overflow: hidden;
-  min-height: calc(100% - 461px - 32px + -40px);
-  padding: 461px + 32px 0 40px;
-  @include background(linear-gradient(#fff, #dcdcdf));
+// -----------------
+// CONTAINER
+// -----------------
+.container {
+  margin: 0 0 40px;
 
   @include breakpoint(reverso-papa-bear) {
-    min-height: calc(100% - 461px - 64px + -70px);
-    padding: 461px + 64px 0 70px;
+    position: relative;
+    max-width: 270px + 88px + 351px;
+    margin: 160px auto 0;
+  }
+}
+
+// -----------------
+// HEADER
+// -----------------
+header {
+  position: relative;
+  width: 270px;
+  margin: 40px auto 0;
+  text-align: center;
+
+  @include breakpoint(reverso-papa-bear) {
+    margin: 0;
   }
 
-  @include breakpoint(reverso-grandpa-bear) {
-    &:before,
-    &:after {
-      position: absolute;
-      display: block;
-      content: '';
+  h1 {
+    margin: 0;
+    padding: 212px + 32px 0 0;
+    line-height: 0;
+
+    @include breakpoint(reverso-papa-bear) {
+      padding: 212px + 32px + 80px 0 0;
     }
+  }
+
+  p {
+    margin: 12px 0 0;
+    line-height: 0;
+  }
+
+  figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @include breakpoint(reverso-papa-bear) {
+      top: 80px;
+    }
+  }
+
+  a {
+    display: block;
+    width: 268px;
+    height: 53px;
+    margin: 28px 0 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 0 0 rgba(#000, .1), 0 0 5px 0 rgba(#000, .05);
+    line-height: 58px;
 
     &:before {
-      top: 0;
-      left: 0;
-      width: 434px;
-      height: 484px;
-      background: url('../images/bg-wave-left.png') no-repeat;
-      background-size: 434px 484px;
+      display: inline-block;
+      content: '';
+      margin: 0 7px 0 0;
+      font-size: 22px;
+      color: #000;
     }
 
-    &:after {
-      right: 0;
-      bottom: 0;
-      width: 431px;
-      height: 388px;
-      background: url('../images/bg-wave-right.png') no-repeat;
-      background-size: 431px 388px;
+    &:active {
+      background: #f5f6f7;
+      box-shadow: 0 1px 2px 0 rgba(#000, .21) inset;
     }
   }
 }
 
-figure {
-  position: absolute;
-  top: 32px;
-  left: 0;
-  right: 0;
-  max-width: 203.5px + 11px;
-  height: 422.5px + 11px;
-  margin: 0 auto;
-  background: url('../images/bg-iphone.png') no-repeat;
-  background-size: 207.5px + 11px 422.5px + 11px;
-  background-position: center;
-  transform: rotate(-9deg);
+// -----------------
+// MAIN
+// -----------------
+main {
+  @include breakpoint(reverso-papa-bear) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 0 160px;
+  }
+}
+
+// -----------------
+// SCREENS
+// -----------------
+.screens {
+  display: none;
 
   @include breakpoint(reverso-papa-bear) {
-    top: 64px;
+    display: block;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  figure {
+    @include breakpoint(reverso-papa-bear) {
+      margin: 0;
+      position: relative;
+      width: 351px;
+      height: 712px;
+      background: url('../images/iphone6.png') no-repeat;
+      background-size: 351px 712px;
+    }
   }
 
   img {
-    position: absolute;
-    top: 54px;
-    left: 16px;
-    width: 100%;
-    max-width: 183px;
-    opacity: 0;
-
-    &:nth-child(1) {
-      animation: image-fade-in-out $ease-in-out-cubic 20s infinite 0s;
-    }
-
-    &:nth-child(2) {
-      animation: image-fade-in-out $ease-in-out-cubic 20s infinite 10s;
+    @include breakpoint(reverso-papa-bear) {
+      position: absolute;
+      top: 83px;
+      left: 22px;
+      width: 302px;
     }
   }
 }
 
-.app-store {
-  display: block;
-  width: 100%;
-  max-width: 203px;
-  height: 72px;
+// -----------------
+// FOOTER
+// -----------------
+footer {
+  width: 270px;
   margin: 0 auto;
-  background: url('../images/app-store-bg.png') no-repeat;
-  background-size: 203px 72px;
   text-align: center;
-  line-height: 72px;
 
-  svg {
-    position: relative;
-    top: -8px;
-    left: -4px;
-    width: 100%;
-    max-width: 143px;
+  @include breakpoint(reverso-papa-bear) {
+    margin: 0;
+  }
+
+  p {
+    margin: 16px 0 0;
+    line-height: 0;
+  }
+
+  a {
+    display: block;
+    margin: 24px 0 0;
+    line-height: 0;
   }
 }
