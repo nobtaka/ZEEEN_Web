@@ -8,7 +8,8 @@ html {
 // BODY
 // -----------------
 body {
-  // position: relative;
+  background: #fafbfc;
+  transition: all $ease-in-out-cubic 3s;
 }
 
 // -----------------
@@ -138,6 +139,13 @@ main {
       top: 83px;
       left: 22px;
       width: 302px;
+      opacity: 0;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation: image-fade-in-out $ease-in-out-cubic (3 * 10s) infinite #{($i - 1) * 10}s;
+        }
+      }
     }
   }
 }
