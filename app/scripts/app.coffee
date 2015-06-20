@@ -15,7 +15,9 @@ class ZEEEN
     @resize()
 
     dom.$window.on 'load', =>
-      @changeColor()
+      @setChangeColor()
+
+    setInterval(@setChangeColor, 50000)
 
   setChangeColor: ->
     if dom.$window.width() > breakpoint.papa
@@ -60,13 +62,6 @@ class ZEEEN
         , 10000 / 2
         dom.$screen.eq(show).addClass('show')
 
-  changeColor: ->
-    @setChangeColor()
-
-    setInterval =>
-      @setChangeColor()
-    , 50000
-
   resize: ->
     timer = false
     dom.$window.on 'resize', =>
@@ -74,10 +69,12 @@ class ZEEEN
         clearTimeout(timer)
       timer = setTimeout =>
         if dom.$window.width() < breakpoint.papa
-          dom.$body.removeAttr('style')
+          intervalChangeColor = ->
+            setInterval(@setChangeColor(), 50000)
+            clearInterval(intervalChangeColor)
           dom.$container.removeClass('white')
         else
-          @changeColor()
+          setInterval(@setChangeColor(), 50000)
       , 300
 
 $ ->
