@@ -8,6 +8,7 @@ class ZEEEN
     $window: $(window)
     $body: $('body')
     $container: $('.container')
+    $screen: $('.screens').find('li')
   }
 
   constructor: ->
@@ -21,27 +22,43 @@ class ZEEEN
       setTimeout ->
         dom.$body.css('background': '#061b33')
         dom.$container.addClass('white')
+        toggleClassShowHide(3, 4, 0)
       , 0
 
       setTimeout ->
         dom.$body.css('background': '#6cd957')
         dom.$container.removeClass('white')
+        toggleClassShowHide(4, 0, 1)
       , 10000
 
       setTimeout ->
         dom.$body.css('background': '#fafbfc')
         dom.$container.removeClass('white')
+        toggleClassShowHide(0, 1, 2)
       , 20000
 
       setTimeout ->
         dom.$body.css('background': '#072847')
         dom.$container.addClass('white')
+        toggleClassShowHide(1, 2, 3)
       , 30000
 
       setTimeout ->
         dom.$body.css('background': '#1ba3db')
         dom.$container.addClass('white')
+        toggleClassShowHide(2, 3, 4)
       , 40000
+
+      toggleClassShowHide = (base, hide, show) ->
+        dom.$screen.eq(base).removeClass('hide')
+        setTimeout ->
+          dom.$screen.eq(base).removeAttr('style')
+        , 10000 / 2
+        dom.$screen.eq(hide).addClass('hide').removeClass('show')
+        setTimeout ->
+          dom.$screen.eq(hide).css('z-index': -1)
+        , 10000 / 2
+        dom.$screen.eq(show).addClass('show')
 
   changeColor: ->
     @setChangeColor()

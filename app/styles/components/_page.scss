@@ -17,8 +17,8 @@ body {
     position: relative;
     max-width: 270px + 88px + 351px;
     height: 712px;
-    margin: 40px auto 0;
-    padding: 0 0 40px;
+    margin: 0 auto;
+    padding: 40px 0;
 
     path {
       transition: all $ease-in-out-cubic 6s;
@@ -165,12 +165,24 @@ main {
       //   }
       // }
     }
+
+    &.show {
+      img {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    &.hide {
+      img {
+        transform: translate3d(-302px, 0, 0);
+      }
+    }
   }
 
   img {
-    visibility: hidden;
-    transform: translate(16px, 0);
     width: 100%;
+    transition: all $ease-in-out-cubic 2s;
+    transform: translate3d(302px, 0, 0);
   }
 }
 
