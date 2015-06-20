@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title ZEEEN
+    block meta-info
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel="icon", href="favicon.png")
+    link(rel="apple-touch-icon", href="apple-touch-icon.png")
+    link(rel="shortcut icon", href="favicon.ico")
+
+    link(rel="stylesheet", href='http://fonts.googleapis.com/css?family=Lato:100,400,700')
+    // build:css({.tmp,app}) styles/main.min.css
+    link(rel="stylesheet", href="/bower_components/normalize-css/normalize.css")
+    link(rel="stylesheet", href="/styles/main.css")
+    // endbuild
+
+  body
+    block content
+
+    // build:js({.tmp,app}) scripts/app.min.js
+    script(src="bower_components/jquery/dist/jquery.js")
+    script(src="scripts/app.js")
+    // endbuild
