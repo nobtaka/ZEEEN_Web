@@ -1,7 +1,16 @@
 // -----------------
+// HTML
+// -----------------
+html {
+  height: 100%;
+}
+
+// -----------------
 // BODY
 // -----------------
 body {
+  height: 100%;
+  min-height: 100%;
   background: #fafbfc;
   transition: all $ease-in-out-cubic 6s;
   transition-delay: 1s;
