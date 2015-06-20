@@ -156,6 +156,7 @@ main {
       height: 537px;
       border-radius: 3px;
       border: 1px solid #2b3729;
+      z-index: 1;
 
       // @for $i from 1 through 5 {
       //   &:nth-child(#{$i}) {
@@ -181,7 +182,7 @@ main {
 
   img {
     width: 100%;
-    transition: all $ease-in-out-cubic 2s;
+    transition: all $ease-in-out-cubic 1.5s;
     transform: translate3d(302px, 0, 0);
   }
 }
