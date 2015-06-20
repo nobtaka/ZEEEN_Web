@@ -146,21 +146,31 @@ main {
     }
   }
 
-  img {
+  li {
     @include breakpoint(reverso-papa-bear) {
+      overflow: hidden;
       position: absolute;
       top: 83px;
       left: 26px;
       width: 302px;
+      height: 537px;
       border-radius: 3px;
-      opacity: 0;
+      border: 1px solid #2b3729;
 
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          animation: image-fade-in-out $ease-in-out-cubic (5 * 10s) infinite #{($i - 1) * 10}s;
-        }
-      }
+      // @for $i from 1 through 5 {
+      //   &:nth-child(#{$i}) {
+      //     img {
+      //       animation: image-fade-in-out $ease-in-out-cubic (5 * 10s) infinite #{($i - 1) * 10}s;
+      //     }
+      //   }
+      // }
     }
+  }
+
+  img {
+    visibility: hidden;
+    transform: translate(16px, 0);
+    width: 100%;
   }
 }
 
