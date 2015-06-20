@@ -18,7 +18,6 @@ class ZEEEN
 
   setChangeColor: ->
     if dom.$window.width() > breakpoint.papa
-      console.log 'setChangeColor'
       setTimeout ->
         dom.$body.css('background': '#061b33')
         dom.$container.addClass('white')
@@ -34,13 +33,22 @@ class ZEEEN
         dom.$container.removeClass('white')
       , 20000
 
+      setTimeout ->
+        dom.$body.css('background': '#072847')
+        dom.$container.addClass('white')
+      , 30000
+
+      setTimeout ->
+        dom.$body.css('background': '#1ba3db')
+        dom.$container.addClass('white')
+      , 40000
+
   changeColor: ->
-    console.log 'changeColor'
     @setChangeColor()
 
     setInterval =>
       @setChangeColor()
-    , 30000
+    , 50000
 
   resize: ->
     timer = false

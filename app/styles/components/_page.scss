@@ -3,7 +3,8 @@
 // -----------------
 body {
   background: #fafbfc;
-  transition: all $ease-in-out-cubic 3s;
+  transition: all $ease-in-out-cubic 6s;
+  transition-delay: 1s;
 }
 
 // -----------------
@@ -20,7 +21,8 @@ body {
     padding: 0 0 40px;
 
     path {
-      transition: all $ease-in-out-cubic 3s;
+      transition: all $ease-in-out-cubic 6s;
+      transition-delay: 1s;
     }
 
     &.white {
@@ -148,13 +150,14 @@ main {
     @include breakpoint(reverso-papa-bear) {
       position: absolute;
       top: 83px;
-      left: 22px;
+      left: 26px;
       width: 302px;
+      border-radius: 3px;
       opacity: 0;
 
-      @for $i from 1 through 3 {
+      @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
-          animation: image-fade-in-out $ease-in-out-cubic (3 * 10s) infinite #{($i - 1) * 10}s;
+          animation: image-fade-in-out $ease-in-out-cubic (5 * 10s) infinite #{($i - 1) * 10}s;
         }
       }
     }
