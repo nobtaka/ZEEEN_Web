@@ -58,29 +58,29 @@ body {
       transition: all $ease-in-out-cubic 6s;
       transition-delay: 1s;
     }
+  }
 
-    &.white {
-      path {
-        fill: #fff;
-      }
+  &.white {
+    path {
+      fill: #fff;
     }
+  }
 
-    .fill-white {
-      path {
-        fill: #fff;
-      }
+  .fill-white {
+    path {
+      fill: #fff;
     }
+  }
 
-    .fill-gray {
-      path {
-        fill: #9b9b9b;
-      }
+  .fill-gray {
+    path {
+      fill: #9b9b9b;
     }
+  }
 
-    .fill-black {
-      path {
-        fill: #000;
-      }
+  .fill-black {
+    path {
+      fill: #000;
     }
   }
 }
