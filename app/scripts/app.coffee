@@ -23,31 +23,36 @@ class ZEEEN
   setChangeColor: ->
     if dom.$window.width() > breakpoint.papa
       setTimeout ->
-        dom.$body.css('background': '#1ba3db')
+        dom.$body.removeAttr('class')
+        dom.$body.addClass('blue-bottle')
         dom.$container.addClass('white')
         toggleClassShowHide(3, 4, 0)
       , 0
 
       setTimeout ->
-        dom.$body.css('background': '#061b33')
+        dom.$body.removeAttr('class')
+        dom.$body.addClass('blues')
         dom.$container.addClass('white')
         toggleClassShowHide(4, 0, 1)
       , 10000
 
       setTimeout ->
-        dom.$body.css('background': '#6cd957')
+        dom.$body.removeAttr('class')
+        dom.$body.addClass('parakeet')
         dom.$container.removeClass('white')
         toggleClassShowHide(0, 1, 2)
       , 20000
 
       setTimeout ->
-        dom.$body.css('background': '#fafbfc')
+        dom.$body.removeAttr('class')
+        dom.$body.addClass('magic-passport')
         dom.$container.removeClass('white')
         toggleClassShowHide(1, 2, 3)
       , 30000
 
       setTimeout ->
-        dom.$body.css('background': '#072847')
+        dom.$body.removeAttr('class')
+        dom.$body.addClass('r')
         dom.$container.addClass('white')
         toggleClassShowHide(2, 3, 4)
       , 40000

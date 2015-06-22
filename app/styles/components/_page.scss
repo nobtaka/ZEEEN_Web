@@ -18,6 +18,26 @@ body {
   @include breakpoint(reverso-papa-bear) {
     height: 100%;
     min-height: 100%;
+
+    &.blue-bottle {
+      background: #1ba3db;
+    }
+
+    &.blues {
+      background: #061b33;
+    }
+
+    &.parakeet {
+      background: #6cd957;
+    }
+
+    &.magic-passport {
+      background: #fafbfc;
+    }
+
+    &.r {
+      background: #072847;
+    }
   }
 }
 
