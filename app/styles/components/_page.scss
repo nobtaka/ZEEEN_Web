@@ -189,7 +189,9 @@ form {
 
     &:focus {
       outline: 0;
+    }
 
+    &.focus {
       + label {
         opacity: 0;
       }

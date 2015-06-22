@@ -13,6 +13,7 @@ class ZEEEN
 
   constructor: ->
     @resize()
+    @form()
     @submit()
 
     dom.$window.on 'load', =>
@@ -82,6 +83,17 @@ class ZEEEN
         else
           setInterval(@setChangeColor(), 50000)
       , 300
+
+  form: ->
+    $('form').find('input')
+      .on 'focus', $.proxy (event) ->
+        $(event.target).addClass('focus')
+      , @
+
+      .on 'blur', $.proxy (event) ->
+        if $(event.target).val() == ''
+          $(event.target).removeClass('focus')
+      , @
 
   submit: ->
     $('form').on 'submit', ->
