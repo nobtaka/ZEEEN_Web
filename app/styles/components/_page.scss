@@ -12,7 +12,7 @@ html {
 // -----------------
 body {
   background: #fafbfc;
-  transition: all $ease-in-out-cubic 6s;
+  transition: all $ease-in-out-cubic 4.5s;
   transition-delay: 1s;
 
   @include breakpoint(reverso-papa-bear) {
@@ -45,9 +45,21 @@ body {
       }
     }
 
-    #app-store {
+    .fill-white {
       path {
-        fill: #555a5f;
+        fill: #fff;
+      }
+    }
+
+    .fill-gray {
+      path {
+        fill: #9b9b9b;
+      }
+    }
+
+    .fill-black {
+      path {
+        fill: #000;
       }
     }
   }
@@ -95,31 +107,104 @@ header {
 
   a {
     display: block;
-    width: 268px;
-    height: 53px;
+    width: 270px;
+    height: 55px;
     margin: 28px 0 0;
-    border: 1px solid #e8e8e8;
+    // border: 1px solid #e8e8e8;
     border-radius: 6px;
-    background: #fff;
-    box-shadow: 0 1px 0 0 rgba(#000, .1), 0 0 5px 0 rgba(#000, .05);
+    background: #000;
+    // box-shadow: 0 1px 0 0 rgba(#000, .1), 0 0 5px 0 rgba(#000, .05);
     line-height: 55px;
 
-    &:before {
-      display: inline-block;
-      content: '';
-      margin: 0 7px 0 0;
-      font-size: 22px;
-      color: #000;
+    // &:before {
+    //   display: inline-block;
+    //   content: '';
+    //   margin: 0 7px 0 0;
+    //   font-size: 22px;
+    //   color: #fff;
+    //   vertical-align: middle;
+    // }
+
+    // &:active {
+    //   background: #f5f6f7;
+    //   box-shadow: 0 1px 2px 0 rgba(#000, .21) inset;
+    // }
+
+    svg {
       vertical-align: middle;
     }
+  }
+
+  .icon-apple {
+    position: relative;
+    top: -.1em;
+    margin: 0 7px 0 0;
+    font-size: 22px;
+    color: #fff;
+    vertical-align: middle;
+  }
+}
+
+form {
+  margin: 32px 0 0;
+
+  p {
+    margin: 0;
+  }
+
+  > div {
+    position: relative;
+    width: 270px;
+    height: 55px;
+    margin: 11px 0 0;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: 0;
+
+      + label {
+        opacity: 0;
+      }
+    }
+
+    &.mce_inline_error {
+      border-color: red;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 58px;
+    opacity: 1;
+    transition: all $ease-in-out-cubic .6s;
+    pointer-events: none;
+  }
+
+  button {
+    width: 100px;
+    height: 24px;
+    margin: 12px 0 0;
+    border-radius: 6px;
+    background: #fff;
+    outline: 0;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 1px 0 0 rgba(#000, .1), 0 0 5px 0 rgba(#000, .05);
+    line-height: 22px;
 
     &:active {
       background: #f5f6f7;
       box-shadow: 0 1px 2px 0 rgba(#000, .21) inset;
-    }
-
-    svg {
-      vertical-align: middle;
     }
   }
 }
@@ -155,7 +240,7 @@ main {
       position: relative;
       width: 351px;
       height: 712px;
-      background: url('../images/iphone6.png') no-repeat;
+      background: url('../images/bg-iphone6.png') no-repeat;
       background-size: 351px 712px;
     }
   }
@@ -196,7 +281,7 @@ main {
 
   img {
     width: 100%;
-    transition: all $ease-in-out-cubic 1.5s;
+    transition: all $ease-in-out-cubic .6s;
     transform: translate3d(302px, 0, 0);
   }
 }
