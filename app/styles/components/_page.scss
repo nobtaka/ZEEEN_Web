@@ -12,7 +12,7 @@ html {
 // -----------------
 body {
   background: #fafbfc;
-  transition: all $ease-in-out-cubic 4.5s;
+  transition: all $ease-in-out-cubic 1.5s;
   transition-delay: 1s;
 
   @include breakpoint(reverso-papa-bear) {
@@ -163,7 +163,7 @@ body {
     padding: 40px 0;
 
     path {
-      transition: all $ease-in-out-cubic 6s;
+      transition: all $ease-in-out-cubic 1.5s;
       transition-delay: 1s;
     }
   }
