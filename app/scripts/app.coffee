@@ -14,7 +14,7 @@ class ZEEEN
   constructor: ->
     @resize()
     @form()
-    @submit()
+    # @submit()
 
     dom.$window.on 'load', =>
       @setChangeColor()
