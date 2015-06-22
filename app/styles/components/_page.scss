@@ -21,22 +21,130 @@ body {
 
     &.blue-bottle {
       background: #1ba3db;
+
+      path {
+        fill: #fff;
+      }
     }
 
     &.blues {
       background: #061b33;
+
+      path {
+        fill: #37e7ff;
+      }
     }
 
     &.parakeet {
       background: #6cd957;
+
+      path {
+        fill: #000;
+      }
     }
 
     &.magic-passport {
       background: #fafbfc;
+
+      path {
+        fill: #1505c6;
+      }
     }
 
     &.r {
       background: #072847;
+
+      path {
+        fill: #ff520d;
+      }
+    }
+
+    &.flatstock {
+      background: #b33827;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &.hearing {
+      background: #f8d9a0;
+
+      path {
+        fill: #9a3e00;
+      }
+    }
+
+    &.hipsters {
+      background: #7d3469;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &.hotter {
+      background: #fbae15;
+
+      path {
+        fill: #000;
+      }
+    }
+
+    &.pepsi {
+      background: #013670;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &.anduin {
+      background: #fae8ac;
+
+      path {
+        fill: #000;
+      }
+    }
+
+    &.imate {
+      background: #ffcd40;
+
+      path {
+        fill: #000;
+      }
+    }
+
+    &.paint {
+      background: #fff0d9;
+
+      path {
+        fill: #000;
+      }
+    }
+
+    &.spotify {
+      background: #24d05f;
+
+      path {
+        fill: #000;
+      }
+    }
+
+    &.tipsy {
+      background: #ff8e45;
+
+      path {
+        fill: #250000;
+      }
+    }
+
+    &.z {
+      background: #23201f;
+
+      path {
+        fill: #ffdb1b;
+      }
     }
   }
 }
@@ -60,17 +168,17 @@ body {
     }
   }
 
-  &.white {
-    path {
-      fill: #fff;
-    }
-  }
-
-  .fill-white {
-    path {
-      fill: #fff;
-    }
-  }
+  // &.white {
+  //   path {
+  //     fill: #fff;
+  //   }
+  // }
+  //
+  // .fill-white {
+  //   path {
+  //     fill: #fff;
+  //   }
+  // }
 
   .fill-gray {
     path {
@@ -257,7 +365,7 @@ main {
     @include breakpoint(reverso-papa-bear) {
       margin: 0;
       position: relative;
-      width: 349px;
+      width: 350px;
       height: 710px;
       background: url('../images/bg-iphone6.png') no-repeat;
       background-size: 349px 710px;
