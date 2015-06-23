@@ -15,137 +15,146 @@ body {
   transition: all $ease-in-out-cubic 1.5s;
   transition-delay: 1s;
 
+  &.blue-bottle {
+    background: #1ba3db;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &.blues {
+    background: #061b33;
+
+    path {
+      fill: #37e7ff;
+    }
+  }
+
+  &.parakeet {
+    background: #6cd957;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.magic-passport {
+    background: #fafbfc;
+
+    path {
+      fill: #1505c6;
+    }
+  }
+
+  &.r {
+    background: #072847;
+
+    path {
+      fill: #ff520d;
+    }
+  }
+
+  &.flatstock {
+    background: #b33827;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &.hearing {
+    background: #f8d9a0;
+
+    path {
+      fill: #9a3e00;
+    }
+  }
+
+  &.hipsters {
+    background: #7d3469;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &.hotter {
+    background: #fbae15;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.nightmare {
+    background: #f2f2f2;
+
+    path {
+      fill: #5e4985;
+    }
+  }
+
+  &.pepsi {
+    background: #013670;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &.anduin {
+    background: #fae8ac;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.imate {
+    background: #ffcd40;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.paint {
+    background: #fff0d9;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.spotify {
+    background: #24d05f;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &.tipsy {
+    background: #ff8e45;
+
+    path {
+      fill: #250000;
+    }
+  }
+
+  &.z {
+    background: #23201f;
+
+    path {
+      fill: #ffdb1b;
+    }
+  }
+
   @include breakpoint(reverso-papa-bear) {
     height: 100%;
     min-height: 100%;
 
-    &.blue-bottle {
-      background: #1ba3db;
-
-      path {
-        fill: #fff;
-      }
-    }
-
-    &.blues {
-      background: #061b33;
-
-      path {
-        fill: #37e7ff;
-      }
-    }
-
-    &.parakeet {
-      background: #6cd957;
-
-      path {
-        fill: #000;
-      }
-    }
-
-    &.magic-passport {
-      background: #fafbfc;
-
-      path {
-        fill: #1505c6;
-      }
-    }
-
-    &.r {
-      background: #072847;
-
-      path {
-        fill: #ff520d;
-      }
-    }
-
-    &.flatstock {
-      background: #b33827;
-
-      path {
-        fill: #fff;
-      }
-    }
-
-    &.hearing {
-      background: #f8d9a0;
-
-      path {
-        fill: #9a3e00;
-      }
-    }
-
-    &.hipsters {
-      background: #7d3469;
-
-      path {
-        fill: #fff;
-      }
-    }
-
-    &.hotter {
-      background: #fbae15;
-
-      path {
-        fill: #000;
-      }
-    }
-
-    &.pepsi {
-      background: #013670;
-
-      path {
-        fill: #fff;
-      }
-    }
-
-    &.anduin {
-      background: #fae8ac;
-
-      path {
-        fill: #000;
-      }
-    }
-
-    &.imate {
-      background: #ffcd40;
-
-      path {
-        fill: #000;
-      }
-    }
-
-    &.paint {
-      background: #fff0d9;
-
-      path {
-        fill: #000;
-      }
-    }
-
-    &.spotify {
-      background: #24d05f;
-
-      path {
-        fill: #000;
-      }
-    }
-
-    &.tipsy {
-      background: #ff8e45;
-
-      path {
-        fill: #250000;
-      }
-    }
-
-    &.z {
-      background: #23201f;
-
-      path {
-        fill: #ffdb1b;
-      }
-    }
   }
 }
 
@@ -157,28 +166,18 @@ body {
 
   @include breakpoint(reverso-papa-bear) {
     position: relative;
+    top: 50%;
     max-width: 270px + 88px + 351px;
-    height: 712px;
+    height: 710px - 80px;
     margin: 0 auto;
     padding: 40px 0;
-
-    path {
-      transition: all $ease-in-out-cubic 1.5s;
-      transition-delay: 1s;
-    }
+    transform: translate(0, -50%);
   }
 
-  // &.white {
-  //   path {
-  //     fill: #fff;
-  //   }
-  // }
-  //
-  // .fill-white {
-  //   path {
-  //     fill: #fff;
-  //   }
-  // }
+  path {
+    transition: all $ease-in-out-cubic 1.5s;
+    transition-delay: 1s;
+  }
 
   .fill-gray {
     path {
@@ -243,20 +242,6 @@ header {
     background: #000;
     // box-shadow: 0 1px 0 0 rgba(#000, .1), 0 0 5px 0 rgba(#000, .05);
     line-height: 55px;
-
-    // &:before {
-    //   display: inline-block;
-    //   content: '';
-    //   margin: 0 7px 0 0;
-    //   font-size: 22px;
-    //   color: #fff;
-    //   vertical-align: middle;
-    // }
-
-    // &:active {
-    //   background: #f5f6f7;
-    //   box-shadow: 0 1px 2px 0 rgba(#000, .21) inset;
-    // }
 
     svg {
       vertical-align: middle;
@@ -357,10 +342,6 @@ main {
     display: block;
   }
 
-  h2 {
-    margin: 0;
-  }
-
   figure {
     @include breakpoint(reverso-papa-bear) {
       margin: 0;
@@ -372,7 +353,7 @@ main {
     }
   }
 
-  li {
+  h2 {
     @include breakpoint(reverso-papa-bear) {
       overflow: hidden;
       position: absolute;
@@ -380,6 +361,7 @@ main {
       left: 24px;
       width: 298px;
       height: 530px;
+      margin: 0;
       border-radius: 8px;
       border: 3px solid #2b3729;
       z-index: 1;
@@ -401,7 +383,7 @@ main {
 
     &.hide {
       img {
-        transform: translate3d(-300px, 0, 0);
+        transform: translate3d(-298px, 0, 0);
       }
     }
   }
@@ -409,7 +391,7 @@ main {
   img {
     width: 100%;
     transition: all $ease-in-out-cubic .6s;
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(298px, 0, 0);
   }
 }
 
@@ -427,12 +409,27 @@ footer {
 
   p {
     margin: 16px 0 0;
-    line-height: 0;
+    // line-height: 0;
+  }
+
+  > div {
+    position: relative;
   }
 
   a {
+    // visibility: hidden;
+    opacity: 0;
     display: block;
     margin: 24px 0 0;
-    line-height: 0;
+    // line-height: 0;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin: 0 auto;
   }
 }
