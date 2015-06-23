@@ -8,7 +8,7 @@ class ZEEEN
     $window: $(window)
     $body: $('body')
     $container: $('.container')
-    $screen: $('.screens').find('li')
+    $screen: $('.screens').find('h2')
     $footer: $('footer')
   }
 
