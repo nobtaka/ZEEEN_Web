@@ -9,6 +9,7 @@ meta = require '../package.json'
 path = meta.gulpvars
 
 gulp.task 'serve', [
+  'images'
   'bower'
   'templates'
   'scripts'
@@ -31,6 +32,7 @@ gulp.task 'serve', [
   gulp.watch ["#{path['stylesSrc']}/**/*.scss"], ['styles']
   gulp.watch ["#{path['scriptsSrc']}/**/*.coffee"], ['scripts']
   gulp.watch ["#{path['iconsSrc']}/*.svg"], ['fonts']
+  gulp.watch ["#{path['imagesSrc']}/**/*"], ['images']
 
 gulp.task 'serve:dist', ['build'], ->
   browserSync

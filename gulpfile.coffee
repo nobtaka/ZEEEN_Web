@@ -3,6 +3,7 @@
 gulp = require 'gulp'
 $ = require('gulp-load-plugins')()
 require('require-dir')('./tasks')
+pngquant = require 'imagemin-pngquant'
 
 meta = require './package.json'
 path = meta.gulpvars
@@ -33,7 +34,14 @@ gulp.task 'images', ->
     .pipe $.imagemin
       progressive: true
       interlaced: true
-    .pipe gulp.dest "#{path['imagesDist']}"
+      svgoPlugins: [{removeViewBox: false}]
+      use: [
+        pngquant(
+          quality: '65-80'
+          speed: 4
+        )
+      ]
+    .pipe gulp.dest "#{path['imagesSrc']}"
     .pipe $.size()
 
 
