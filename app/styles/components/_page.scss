@@ -190,6 +190,12 @@ body {
       fill: #000;
     }
   }
+
+  .fill-white {
+    path {
+      fill: #fff;
+    }
+  }
 }
 
 // -----------------
@@ -423,14 +429,14 @@ footer {
     display: block;
     margin: 24px 0 0;
     // line-height: 0;
-  }
 
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    margin: 0 auto;
+    + svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      margin: 0 auto;
+    }
   }
 }
