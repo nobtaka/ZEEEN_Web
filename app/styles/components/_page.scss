@@ -15,6 +15,14 @@ body {
   transition: all $ease-in-out-cubic 1.5s;
   transition-delay: 1s;
 
+  &.guesto {
+    background: #fde4c8;
+
+    path {
+      fill: #8bb994
+    }
+  }
+
   &.blue-bottle {
     background: #1ba3db;
 

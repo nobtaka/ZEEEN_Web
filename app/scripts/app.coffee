@@ -27,115 +27,105 @@ class ZEEEN
   setChangeColor: ->
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('blue-bottle')
-      dom.$container.addClass('white')
-      toggleClassShowHide(14, 15, 0)
+      dom.$body.addClass('guesto')
+      toggleClassShowHide(15, 16, 0)
     , 0
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('blues')
-      dom.$container.addClass('white')
-      toggleClassShowHide(15, 0, 1)
+      dom.$body.addClass('blue-bottle')
+      toggleClassShowHide(16, 0, 1)
     , 6000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('parakeet')
-      dom.$container.removeClass('white')
+      dom.$body.addClass('blues')
       toggleClassShowHide(0, 1, 2)
     , 12000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('magic-passport')
-      dom.$container.removeClass('white')
+      dom.$body.addClass('parakeet')
       toggleClassShowHide(1, 2, 3)
     , 18000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('flatstock')
-      dom.$container.addClass('white')
+      dom.$body.addClass('magic-passport')
       toggleClassShowHide(2, 3, 4)
     , 24000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('hearing')
-      dom.$container.addClass('white')
+      dom.$body.addClass('flatstock')
       toggleClassShowHide(3, 4, 5)
     , 30000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('hipsters')
-      dom.$container.addClass('white')
+      dom.$body.addClass('hearing')
       toggleClassShowHide(4, 5, 6)
     , 36000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('nightmare')
-      dom.$container.addClass('white')
+      dom.$body.addClass('hipsters')
       toggleClassShowHide(5, 6, 7)
     , 42000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('pepsi')
-      dom.$container.addClass('white')
+      dom.$body.addClass('nightmare')
       toggleClassShowHide(6, 7, 8)
     , 48000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('imate')
-      dom.$container.addClass('white')
+      dom.$body.addClass('pepsi')
       toggleClassShowHide(7, 8, 9)
     , 54000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('anduin')
-      dom.$container.addClass('white')
+      dom.$body.addClass('imate')
       toggleClassShowHide(8, 9, 10)
     , 60000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('paint')
-      dom.$container.addClass('white')
+      dom.$body.addClass('anduin')
       toggleClassShowHide(9, 10, 11)
     , 66000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('spotify')
-      dom.$container.addClass('white')
+      dom.$body.addClass('paint')
       toggleClassShowHide(10, 11, 12)
     , 72000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('tipsy')
-      dom.$container.addClass('white')
+      dom.$body.addClass('spotify')
       toggleClassShowHide(11, 12, 13)
     , 78000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('z')
-      dom.$container.addClass('white')
+      dom.$body.addClass('tipsy')
       toggleClassShowHide(12, 13, 14)
     , 84000
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('r')
-      dom.$container.addClass('white')
+      dom.$body.addClass('z')
       toggleClassShowHide(13, 14, 15)
     , 90000
+
+    setTimeout ->
+      dom.$body.removeAttr('class')
+      dom.$body.addClass('r')
+      toggleClassShowHide(14, 15, 16)
+    , 96000
 
     toggleClassShowHide = (base, hide, show) ->
       dom.$screen.eq(base).removeClass('hide')
