@@ -32,7 +32,7 @@ gulp.task 'serve', [
   gulp.watch ["#{path['stylesSrc']}/**/*.scss"], ['styles']
   gulp.watch ["#{path['scriptsSrc']}/**/*.coffee"], ['scripts']
   gulp.watch ["#{path['iconsSrc']}/*.svg"], ['fonts']
-  gulp.watch ["#{path['imagesSrc']}/**/*"], ['images']
+  # gulp.watch ["#{path['imagesSrc']}/**/*"], ['images']
 
 gulp.task 'serve:dist', ['build'], ->
   browserSync
