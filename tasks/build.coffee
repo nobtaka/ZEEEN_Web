@@ -40,6 +40,9 @@ gulp.task 'build', ['default'], ->
   gulp.src 'app/*.png'
     .pipe gulp.dest 'dist'
 
+  gulp.src 'app/*.svg'
+    .pipe gulp.dest 'dist'
+
   gulp.src '.tmp/php/*'
     .pipe gulp.dest 'dist/php'
 
