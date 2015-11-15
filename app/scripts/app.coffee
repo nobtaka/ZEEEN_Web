@@ -33,7 +33,7 @@ class ZEEEN
 
     setTimeout ->
       dom.$body.removeAttr('class')
-      dom.$body.addClass('blue-bottle')
+      dom.$body.addClass('imperial')
       toggleClassShowHide(16, 0, 1)
     , 6000
 
